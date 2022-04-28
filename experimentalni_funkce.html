@@ -52,14 +52,21 @@
       }
 
 
-         //load the bgColor on page load:
-    document.getElementById('day-night').style.backgroundColor=localStorage.bgcolor || '#00d0ff';
 
   // When Background-Color is changed:
   localStorage.bgcolor = yourValueHere;
   
   // on page load:
   var bgcolor = localStorage.bgcolor || fallbackColor;
+
+
+// When Background-Color is changed:
+localStorage.bgcolor = yourValueHere;
+
+// on page load:
+var bgcolor = localStorage.bgcolor || fallbackColor;
+
+
 
     }
 </script>
