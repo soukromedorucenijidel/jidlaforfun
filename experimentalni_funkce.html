@@ -5,10 +5,68 @@
     <script src="scripts.js"></script>
 
 
-<p>Experimentální funkce</p>
-<p6>Tuto funkci přidáme bry</p6>
 
-<body style="background-color: #00d0ff;"></body>
+
+
+
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="Content-type" content="text/html; charset=utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+  
+  <p>Experimentální funkce</p>
+  
+  
+  </head>
+  
+  <body id=day-night>
+  
+    <div>
+    <button id=change-background>Tmavý řežim</button>
+    </div>
+
+    <body style="background-color: #00d0ff;"></body>
+  
+
+  </body>
+  
+
+
+
+
+
+
+  <script type='text/javascript'>
+  
+    var backgroundMode = 0;
+  
+    document.getElementsByTagName('button')[0].onclick=function() {
+      if (backgroundMode == 0) {
+        document.getElementById('day-night').style.backgroundColor='#1a1a1a';
+        backgroundMode = 1;
+        document.getElementById('change-background').innerHTML='Světlý režim';
+      } else {
+          document.getElementById('day-night').style.backgroundColor='#00d0ff';
+          backgroundMode = 0;
+          document.getElementById('change-background').innerHTML='Světlý režim';
+      }
+
+
+         //load the bgColor on page load:
+    document.getElementById('day-night').style.backgroundColor=localStorage.bgcolor || '#00d0ff';
+
+  // When Background-Color is changed:
+  localStorage.bgcolor = yourValueHere;
+  
+  // on page load:
+  var bgcolor = localStorage.bgcolor || fallbackColor;
+
+    }
+</script>
+  
+  
+
+
 
 
 </html>
